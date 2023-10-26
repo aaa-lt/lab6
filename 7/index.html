@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+
+<head>
+    <title>Галерея</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+</head>
+
+<body>
+
+<p><img id="largeImg" src="images/image-6.jpg" title="5 лучших аниме Хаяо Миядзаки" alt="5 лучших аниме Хаяо Миядзаки"></p>
+
+<ul id="thumbs">
+    <!-- браузер показывает небольшую встроенную подсказку из атрибута "title" при наведении курсора на текст -->
+    <li>
+        <a href="#" title="Навсикая из долины ветров"><img src="images/image-1-thumb.jpg" alt="Навсикая из долины ветров"></a>
+    </li>
+    <li>
+        <a href="#" title="Мой сосед Тоторо"><img src="images/image-2-thumb.jpg" alt="Мой сосед Тоторо"></a>
+    </li>
+    <li>
+        <a href="#" title="Унесенные призраками"><img src="images/image-3-thumb.jpg" alt="Унесенные призраками"></a>
+    </li>
+    <li>
+        <a href="#" title="Ходячий замок"><img src="images/image-4-thumb.jpg" alt="Ходячий замок"></a>
+    </li>
+    <li>
+        <a href="#" title="Ведьмина служба доставки"><img src="images/image-5-thumb.jpg" alt="Ведьмина служба доставки"></a>
+    </li>
+</ul>
+<!-- Нужно добавить скрипт -->
+<script>
+    window.onload = () => {
+        document.getElementById( "thumbs" ).addEventListener( "click", changeImg );
+    };
+    const changeImg = (data) => {
+        const largeImg = document.getElementById( "largeImg" );
+        const number = data.target.src.match( /image-\d-thumb/g ).join().split( "-" );
+        largeImg.src = "images/image-" + number[1] + ".jpg";
+        largeImg.title = data.target.parentElement.title;
+        largeImg.alt = data.target.parentElement.title;
+    };
+</script>
+
+</body>
+</html>

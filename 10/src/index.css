@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(180, 185, 220);
+}
+
+#boat {
+    position: absolute;
+    left: 50px;
+}
+
+#boat.boatEnable {
+    transition: 3s;
+    left: 150%;
+}
+
+#button {
+    padding: 1.5rem 3rem;
+    width: 250px;
+    border: none;
+    background: rgb(100, 110, 200);
+    color: white;
+    font-size: 1rem;
+    border-radius: .5rem;
+    white-space: nowrap;
+}
+
+#button.buttonEnable {
+    border-radius: 1rem 1rem 4rem 4rem;
+    transition: 1s;
+}
+
+#tower {
+    width: 10px;
+    height: 150px;
+    background: rgb(100, 110, 200);
+    transform: rotate(-90deg);
+    transform-origin: bottom right;
+    margin: 100px 35% -2px 65%;
+    position: relative;
+}
+
+#tower.towerEnable {
+    transform: none;
+    transition: 1.5s;
+}
+
+#tower.towerEnable::before, #tower.towerEnable::after {
+    border-bottom: solid white 140px;
+    transition-delay: 750ms;
+    transition-duration: 1s;
+}
+
+#tower::before, #tower::after {
+    position: absolute;
+    content: '';
+    border-bottom: 0 solid white;
+}
+
+#tower::before {
+    left: -102px;
+    border-left: solid transparent 100px;
+}
+
+#tower::after {
+    right: -72px;
+    border-right: solid transparent 70px;
+}
