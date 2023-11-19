@@ -31,10 +31,10 @@
 </div>
 <!-- Нужно добавить скрипт -->
 <script>
-    window.onload = function () {
+    window.onload = () => {
         const elements = document.getElementsByClassName( "remove-button" );
         for ( const element of elements ) {
-            element.onclick = function () {
+            element.onclick = () => {
                 element.parentElement.hidden = true;
             };
         }
