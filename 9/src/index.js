@@ -3,22 +3,22 @@ window.onload = () => {
         let startNum = 1;
         setInterval( () => {
             startNum = carouselLogic( startNum );
-        }, 500 )
-    }
+        }, 500 );
+    };
     const carouselLogic = (startNum) => {
-        const CarouselElements = document.getElementsByClassName( 'carousel-items' );
+        const CarouselElements = document.getElementsByClassName( "carousel-items" );
         for ( const CarouselElement of CarouselElements ) {
-            const carouselItems = CarouselElement.querySelectorAll( '*' );
+            const carouselItems = CarouselElement.querySelectorAll( "*" );
             let i;
             if ( startNum > 2 ) {
                 startNum = 0;
                 i = startNum;
             } else {
-                i = startNum
+                i = startNum;
             }
             for ( const carouselItem of carouselItems ) {
                 if ( i > 2 ) {
-                    i = 0
+                    i = 0;
                 }
                 carouselItem.style.order = i;
                 i++;
@@ -26,8 +26,8 @@ window.onload = () => {
             startNum++;
         }
         return startNum;
-    }
+    };
 
 
-    document.getElementById( 'start' ).addEventListener( 'click', carouselStart, false )
-}
+    document.getElementById( "start" ).addEventListener( "click", carouselStart, false );
+};

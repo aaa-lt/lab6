@@ -1,7 +1,7 @@
 window.onload = () => {
     const button = document.getElementById( "button" );
     button.addEventListener( "click", () => {
-        button.innerText = "Поехали!"
+        button.innerText = "Поехали!";
         button.classList.add( "buttonEnable" );
         setTimeout( () => {
             document.getElementById( "tower" ).classList.add( "towerEnable" );

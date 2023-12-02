@@ -1,6 +1,8 @@
 body {
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
     background: rgb(180, 185, 220);
 }
 
@@ -11,7 +13,7 @@ body {
 
 #boat.boatEnable {
     transition: 3s;
-    left: 150%;
+    left: 200%;
 }
 
 #button {
@@ -53,7 +55,7 @@ body {
 
 #tower::before, #tower::after {
     position: absolute;
-    content: '';
+    content: "";
     border-bottom: 0 solid white;
 }
 
