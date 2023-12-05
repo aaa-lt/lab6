@@ -29,5 +29,5 @@ window.onload = () => {
     };
 
 
-    document.getElementById( "start" ).addEventListener( "click", carouselStart, false );
+    document.getElementById( "start" ).addEventListener( "click", carouselStart );
 };
