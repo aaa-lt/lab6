@@ -35,6 +35,7 @@
         document.getElementById( "thumbs" ).addEventListener( "click", changeImg );
     };
     const changeImg = (data) => {
+        event.preventDefault();
         const largeImg = document.getElementById( "largeImg" );
         const number = data.target.src.match( /image-\d-thumb/g ).join().split( "-" );
         largeImg.src = "images/image-" + number[1] + ".jpg";
